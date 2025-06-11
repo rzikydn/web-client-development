@@ -133,7 +133,7 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className='navbar--container'>
-                <h1 style={{ color: theme.secondary }}>
+                <h1 style={{ color: 'black' }}>
                     {shortname(headerData.name)}
                 </h1>
 
@@ -224,42 +224,6 @@ function Navbar() {
                                     />
                                     <span className={classes.drawerLinks}>
                                         Resume
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
-                                to='/#services'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <BsFillGearFill
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Services
-                                    </span>
-                                </div>
-                            </NavLink>
-                        </Fade>
-
-                        <Fade left>
-                            <NavLink
-                                to='/#blog'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <FaFolderOpen
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Blog
                                     </span>
                                 </div>
                             </NavLink>

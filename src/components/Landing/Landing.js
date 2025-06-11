@@ -9,11 +9,8 @@ import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 
 import {
-    FaTwitter,
     FaLinkedin,
-    FaGithub,
-    FaYoutube,
-    FaBlogger,
+    FaInstagram,
 } from 'react-icons/fa';
 
 function Landing() {
@@ -59,9 +56,7 @@ function Landing() {
                 color: theme.tertiary,
                 border: `3px solid ${theme.tertiary}`,
             },
-            [t.breakpoints.down('sm')]: {
-                display: 'none',
-            },
+            
         },
     }));
 
@@ -72,7 +67,7 @@ function Landing() {
             <div className='landing--container'>
                 <div
                     className='landing--container-left'
-                    style={{ backgroundColor: theme.primary }}
+                    style={{ backgroundColor: 'white' }}
                 >
                     <div className='lcl--content'>
                         {socialsData.linkedIn && (
@@ -83,60 +78,21 @@ function Landing() {
                             >
                                 <FaLinkedin
                                     className='landing--social'
-                                    style={{ color: theme.secondary }}
+                                    style={{ color: 'black' }}
                                     aria-label='LinkedIn'
                                 />
                             </a>
                         )}
-                        {socialsData.github && (
+                        {socialsData.instagram && (
                             <a
-                                href={socialsData.github}
+                                href={socialsData.instagram}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaGithub
+                                <FaInstagram
                                     className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='GitHub'
-                                />
-                            </a>
-                        )}
-                        {socialsData.twitter && (
-                            <a
-                                href={socialsData.twitter}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaTwitter
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
+                                    style={{ color: 'black' }}
+                                    aria-label='Instagram'
                                 />
                             </a>
                         )}
@@ -153,14 +109,14 @@ function Landing() {
                 />
                 <div
                     className='landing--container-right'
-                    style={{ backgroundColor: theme.secondary }}
+                    style={{ backgroundColor: 'gray' }}
                 >
                     <div
                         className='lcr--content'
-                        style={{ color: theme.tertiary }}
+                        style={{ color: 'black' }}
                     >
                         <h6>{headerData.title}</h6>
-                        <h1>{headerData.name}</h1>
+                        <h1 style={{ color: 'black' }}>{headerData.name}</h1>
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>

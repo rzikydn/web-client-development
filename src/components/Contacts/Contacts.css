@@ -140,20 +140,22 @@
 
 .personal-details {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    margin-bottom: 1.5rem;
     width: 100%;
-    margin-bottom: 2.5rem;
+    text-decoration: none;;           /* Izinkan wrap teks */
 }
 
 .personal-details p {
+    display: flex;
+    align-items: center;
     margin-left: 1.5rem;
     font-size: 18px;
     line-height: 110%;
     font-weight: 500;
+    text-align: left;
     font-family: var(--primaryFont);
-    width: 45%;
+    width: 100%;
     word-break: break-word;
 }
 
@@ -162,7 +164,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 1.5rem;
     margin-top: 4rem;
 }

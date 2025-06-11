@@ -53,9 +53,10 @@
 }
 
 .about-description > p {
-    font-size: 1.25rem;
+    font-size: clamp(0.9rem, 1.2vw, 1.15rem);
     color: #e0d9d9;
     font-family: var(--primaryFont);
+    line-height: 1.6;
 }
 
 .about-img {

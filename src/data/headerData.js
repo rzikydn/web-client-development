@@ -1,9 +1,11 @@
 import resume from '../assets/pdf/resume.pdf'
+import profile from '../assets/svg/profile.jpg';
+
 
 export const headerData = {
-    name: 'Jane Doe',
+    name: 'Wildan Rizky Wijaya',
     title: "Web Developer",
-    desciption:"There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared. ",
-    image: 'https://raw.githubusercontent.com/PhantomScript/asset-container/main/developer-portfolio/landingImg.png',
+    desciption:"There was no glitch, but what caught his attention was the flawless data flow. As a Data Entry staff in IT, she handled vital information and supported the company’s risk management certification processes, honing her focus and deepening her grasp of IT infrastructure. ",
+    image: profile,
     resumePdf: resume
 }
