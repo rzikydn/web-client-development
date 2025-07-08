@@ -1,9 +1,10 @@
 .landing {
   height: 100vh;
-  min-height: 600px; /* Tambahkan tinggi minimum */
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .landing--container {
@@ -11,9 +12,9 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 100%; /* Tambahkan width 100% */
+  width: 100%;
   position: relative;
-  overflow: hidden; /* Hindari overflow */
+  overflow: hidden;
 }
 
 .landing--img {
@@ -27,21 +28,10 @@
   border-radius: 50%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s;
-  z-index: 20; /* Pastikan gambar di atas elemen lain */
+  z-index: 20;
   border: 8px solid white;
   background-color: white;
 }
-
-.landing--img-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 25;
-  margin-bottom: -4rem;
-}
-
-
 
 .landing--container-left {
   flex: 35%;
@@ -73,6 +63,7 @@
 .landing--container-right {
   flex: 65%;
   height: 100%;
+  height: 100vh;
   background-color: #eaeaea;
   display: flex;
   flex-direction: column;
@@ -98,7 +89,7 @@
 
 .lcr--content h1 {
   font-weight: 600;
-  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Gunakan clamp untuk font responsif */
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   line-height: 110%;
   margin: 0.5rem 0;
 }
@@ -106,7 +97,7 @@
 .lcr--content p {
   margin-top: 1rem;
   font-weight: 500;
-  font-size: clamp(0.9rem, 2vw, 1rem); /* Font responsif */
+  font-size: clamp(0.9rem, 2vw, 1rem);
   opacity: 0.7;
 }
 
@@ -120,92 +111,91 @@
   align-items: flex-start;
 }
 
-/* Media Queries yang Diperbaiki */
+/* Tablet */
 @media (max-width: 992px) {
   .landing--img {
     --img-size: 280px;
-    position: relative;
     left: 50%;
-    border: 8px solid #eaeaea; /* Border abu-abu di mobile */
+    position: relative;
+    transform: translateX(-50%);
+    border: 8px solid #eaeaea;
     background-color: #eaeaea;
   }
-  
+
   .lcr--content {
-    width: 50%;
-    margin-right: 5rem;
+    width: 60%;
+    margin-right: 3rem;
   }
 }
 
-@media (max-width: 992px) {
-  .landing--img {
-    --img-size: 300px;
-  }
-  
-  .lcr--content {
-    width: 55%;
-    margin-right: 4rem;
-  }
-  
-  .lcr--content h1 {
-    font-size: 2.5rem;
-  }
-}
-
+/* Mobile */
 @media (max-width: 768px) {
   .landing--container {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 100px;
-    z-index: 30;
+    padding-top: 7rem;
+    position: relative;
   }
-  
-  
+
   .landing--img {
     --img-size: 200px;
-    position: relative;
-    left: 27%;
-    top: auto;
-    transform: translateX(-50%);
-    margin-bottom: -5rem;
+    width: var(--img-size);
+    height: var(--img-size);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #eaeaea;
+    background-color: #eaeaea;
+
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin: -1.5rem auto 1rem auto;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(50%, -50%);
+    z-index: 100;
   }
-  
+
   .landing--container-left {
-    display: none; /* Sembunyikan social di mobile */
+    display: none;
   }
-  
+
   .landing--container-right {
     align-items: center;
     padding: 1rem;
     text-align: center;
+    min-height: 100vh;
     flex: 1;
+    padding-bottom: 70%;
   }
-  
+
   .lcr--content {
     width: 100%;
     margin-right: 0;
     padding: 0 1rem;
   }
-  
+
   .lcr-buttonContainer {
     align-items: center;
   }
 }
 
+/* Extra Small Devices */
 @media (max-width: 576px) {
   .landing {
     min-height: 100vh;
     height: auto;
     padding-bottom: 2rem;
   }
-  
+
   .landing--img {
-    --img-size: 200px;
+    --img-size: 155px;
   }
-  
+
   .lcr--content h1 {
     font-size: 2rem;
   }
-  
+
   .lcr-buttonContainer {
     width: 100%;
     padding: 0 1rem;

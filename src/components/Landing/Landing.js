@@ -109,7 +109,13 @@ function Landing() {
                 />
                 <div
                     className='landing--container-right'
-                    style={{ backgroundColor: 'gray' }}
+                    style={{ 
+                        backgroundColor: 'gray', 
+                        minHeight: '70vh',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center', 
+                    }}
                 >
                     <div
                         className='lcr--content'
